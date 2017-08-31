@@ -41,7 +41,22 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form = \FormBuilder::create(\SAMUEL\Forms\UserForm::class);
+
+        if(!$form->isValid()) {
+            return redirect()
+                        ->back()
+                        ->withErrors($form->getErrors())
+                        ->withInput();
+        }
+
+
+        $data = $form->getFieldValues();
+        $password = str_random(6);
+        $data['password'] = $password;
+        User::create($data);
+
+        return redirect()->route('admin.users.index');
     }
 
     /**

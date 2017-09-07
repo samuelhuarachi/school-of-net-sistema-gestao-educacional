@@ -2,7 +2,7 @@
 
 namespace SAMUEL\Http\Controllers\Auth;
 
-use SAMUEL\Models\User;
+use SAMUEL\User;
 use SAMUEL\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;

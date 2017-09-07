@@ -7,7 +7,7 @@
 			<h3>Novo Usuário</h3>
 			{!! form($form->add('insert', 'submit', [
 				'attr' => ['class' => 'btn btn-primary btn-block'],
-				'label' => 'Inserirrr'
+				'label' => Icon::create('floppy-disk') . ' Inserirrr'
 			])) !!}
 		</div>
 	</div>

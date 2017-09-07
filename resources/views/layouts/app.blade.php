@@ -59,6 +59,14 @@
         {!! form($formLogout) !!}
         
 
+        @if(Session::has('message'))
+            <div class="container">
+                <div class="row">
+                    {!! Alert::success(Session::get('message'))->close() !!}
+                </div>           
+            </div>
+        @endif
+
         @yield('content')
     </div>
 

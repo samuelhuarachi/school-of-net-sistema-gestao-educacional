@@ -12,7 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(SAMUEL\Models\User::class, function (Faker\Generator $faker) {
+$factory->define(SAMUEL\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [

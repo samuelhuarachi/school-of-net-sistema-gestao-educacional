@@ -11,8 +11,9 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\SAMUEL\Models\User::class)->create([
-        	'email' => 'admin@user.com'
+        factory(SAMUEL\User::class)->create([
+        	'email' => 'admin@user.com',
+            'enrolment' => 100000
         ]);
     }
 }

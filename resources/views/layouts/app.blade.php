@@ -56,8 +56,11 @@
         @endphp
 
         {!! $navbar !!}
-        {!! form($formLogout) !!}
-        
+
+        @if(Auth::check())
+            {!! form($formLogout) !!}
+        @endif
+
 
         @if(Session::has('message'))
             <div class="container">
